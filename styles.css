@@ -25,3 +25,19 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.blinky{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+.colory{
+  border-color: white;
+  border: 10px, solid;
+  border-radius:10px;
+  position:absolute;
+}
+.growy{
+  border:10px solid white;
+  border-radius:1px;
+  position:absolute;
+}

@@ -58,3 +58,11 @@ makeDancer.prototype.setPosition = function(top, left){
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.lineUp = function (left){
+  var centered = {
+    top: '50%',
+    left: left
+  };
+  this.$node.css(centered);
+};
