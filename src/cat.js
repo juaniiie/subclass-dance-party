@@ -1,8 +1,13 @@
-var makeGrowyDancer = function(top, left, timeBetweenSteps) {
+var makeCat = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.addClass('growy');
-  //$('.growy')
+  this.$node.addClass('cat');
   this.$node.append('<img src="http://i264.photobucket.com/albums/ii188/pokbg2/forum%20tags/Animation1.gif">');
+};
+
+makeCat.prototype = Object.create(makeDancer.prototype);
+makeCat.prototype.constructor = makeCat;
+
+makeCat.prototype.step = function () {
   this.$node.click(function(event) {
     // find the amount of dancers
     var otherDancers = window.dancers;
@@ -11,12 +16,5 @@ var makeGrowyDancer = function(top, left, timeBetweenSteps) {
       otherDancers[i].setPosition(i*50, i*70);
     }
   });
-};
-
-makeGrowyDancer.prototype = Object.create(makeDancer.prototype);
-makeGrowyDancer.prototype.constructor = makeGrowyDancer;
-
-makeGrowyDancer.prototype.step = function () {
-  // this.$node.toggle();
   makeDancer.prototype.step.call(this);
 }

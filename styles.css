@@ -24,17 +24,19 @@ body, a:link, a:visited, a:active{
   background-size: 100px;
   position:absolute;
 }
-.blinky img {
+.apple img {
   width: 100px;
   height: 100px;
   border-radius:10px;
   position:absolute;
 }
-.colory img{
+.heart img{
   width: 250px;
   height: auto;
   position:absolute;
 }
-.growy{
+.cat img{
   position:absolute;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
